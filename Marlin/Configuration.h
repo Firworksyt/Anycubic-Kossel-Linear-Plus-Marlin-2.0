@@ -516,9 +516,9 @@
     #define DEFAULT_Ki_LIST {   1.63,   1.63 }
     #define DEFAULT_Kd_LIST {  76.48,  76.48 }
   #else
-    #define DEFAULT_Kp  34.90
-    #define DEFAULT_Ki   3.46
-    #define DEFAULT_Kd  87.92
+    #define DEFAULT_Kp  42.25
+    #define DEFAULT_Ki   4.16
+    #define DEFAULT_Kd  107.29
   #endif
 #endif // PIDTEMP
 
@@ -560,9 +560,9 @@
   // this is for the aluminium bed with a BuildTak-like sticker on it
   // from pid autotune. "M303 E-1 C8 S60" to run autotune on the bed at 60 degreesC for 8 cycles
   #if ANYCUBIC_KOSSEL_ENABLE_BED == 1
-    #define DEFAULT_bedKp 1864.11
-    #define DEFAULT_bedKi 367.02
-    #define DEFAULT_bedKd 2366.95
+    #define DEFAULT_bedKp 195.33
+    #define DEFAULT_bedKi 28.39
+    #define DEFAULT_bedKd 896.04
   #elif ANYCUBIC_KOSSEL_ENABLE_BED == 2
     // TODO get real PID values for Ultrabase Bed
     #define DEFAULT_bedKp 374.03
@@ -679,7 +679,7 @@
 
   #if ENABLED(ANYCUBIC_KOSSEL_PLUS)
     // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
-    #define DELTA_PRINTABLE_RADIUS 120.0  // (mm)
+    #define DELTA_PRINTABLE_RADIUS 108.0  // (mm)
     // Center-to-center distance of the holes in the diagonal push rods.
     #define DELTA_DIAGONAL_ROD 267        // (mm)
       // Horizontal offset from middle of printer to smooth rod center.
