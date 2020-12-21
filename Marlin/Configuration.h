@@ -121,7 +121,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 0
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -145,11 +145,11 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_TRIGORILLA_14
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_3
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Firworks+ V7"
+#define CUSTOM_MACHINE_NAME "Firworks+ V8"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -516,9 +516,9 @@
     #define DEFAULT_Ki_LIST {   1.63,   1.63 }
     #define DEFAULT_Kd_LIST {  76.48,  76.48 }
   #else
-    #define DEFAULT_Kp  42.25
-    #define DEFAULT_Ki   4.16
-    #define DEFAULT_Kd  107.29
+    #define DEFAULT_Kp  21.15
+    #define DEFAULT_Ki   1.92
+    #define DEFAULT_Kd  58.15
   #endif
 #endif // PIDTEMP
 
@@ -560,9 +560,9 @@
   // this is for the aluminium bed with a BuildTak-like sticker on it
   // from pid autotune. "M303 E-1 C8 S60" to run autotune on the bed at 60 degreesC for 8 cycles
   #if ANYCUBIC_KOSSEL_ENABLE_BED == 1
-    #define DEFAULT_bedKp 195.33
-    #define DEFAULT_bedKi 28.39
-    #define DEFAULT_bedKd 896.04
+    #define DEFAULT_bedKp 438.95
+    #define DEFAULT_bedKi 86.15
+    #define DEFAULT_bedKd 1490.96
   #elif ANYCUBIC_KOSSEL_ENABLE_BED == 2
     // TODO get real PID values for Ultrabase Bed
     #define DEFAULT_bedKp 374.03
@@ -700,7 +700,7 @@
   #endif
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 295.95             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 278.44             // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ { -1.97, 0.0, -1.30 } // Get these values from G33 auto calibrate
 
@@ -1133,7 +1133,7 @@
  *     O-- FRONT --+
  */
 #if ANYCUBIC_PROBE_VERSION == 2
-  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -16.8 }
+  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -16.16 }
 #elif ANYCUBIC_PROBE_VERSION == 1
   #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -19.0 }
 #else
